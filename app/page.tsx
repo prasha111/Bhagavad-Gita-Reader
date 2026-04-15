@@ -1,4 +1,5 @@
 import Link from "next/link";
+// import { useEffect, useState } from "react";
 
 const chapters = [
   { id: 1, name: "Arjuna Vishada Yoga", shlokCount: 47 },
@@ -6,6 +7,13 @@ const chapters = [
 ];
 
 export default function Home() {
+  //const [lastRead, setLastRead] = useState<string | null>(null);
+
+  // useEffect(() => {
+  //   const saved = localStorage.getItem("lastRead");
+  //   // eslint-disable-next-line react-hooks/set-state-in-effect
+  //   if (saved) setLastRead(saved);
+  // }, []);
   return (
     <div className="min-h-screen bg-gradient-to-b from-[#fdfaf5] to-[#f7f1e3] text-[#1a1a1a]">
       
@@ -48,6 +56,14 @@ export default function Home() {
           </Link>
         ))}
       </div>
+      
+      {/* {lastRead && (
+        <Link href={`/reader/${lastRead}`}>
+          <div className="mt-4 text-blue-600 cursor-pointer">
+            Resume Reading →
+          </div>
+        </Link>
+      )} */}
 
 
       <div className="text-center pb-10 text-gray-500 italic">

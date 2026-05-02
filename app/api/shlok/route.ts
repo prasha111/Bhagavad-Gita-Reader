@@ -15,10 +15,38 @@ export async function POST(req: Request) {
   });
 }
 
-export async function GET() {
-  await connectDB();
+export async function GET(req: Request) {
+    await connectDB();
+  
+    const { searchParams } = new URL(req.url);
+  
+    const chapter = searchParams.get("chapter");
+    const shlok = searchParams.get("shlok");
+  
+    try {
 
-  const shloks = await Shlok.find();
-
-  return NextResponse.json(shloks);
-}
+      if (chapter && shlok) {
+        const data = await Shlok.findOne({
+          chapter: Number(chapter),
+          shlokNumber: Number(shlok),
+        });
+  
+        return NextResponse.json(data);
+      }
+  
+ 
+      if (chapter) {
+        const data = await Shlok.find({
+          chapter: Number(chapter),
+        }).sort({ shlokNumber: 1 });
+  
+        return NextResponse.json(data);
+      }
+  
+      const data = await Shlok.find();
+  
+      return NextResponse.json(data);
+    } catch (err) {
+      return NextResponse.json({ error: "Server error" }, { status: 500 });
+    }
+  }

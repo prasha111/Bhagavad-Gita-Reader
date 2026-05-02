@@ -66,8 +66,6 @@ export default function Home() {
         ))}
 
       </div>
-
-      {/* Empty state */}
       {chapters.length === 0 && (
         <div className="text-center text-gray-500">
           No shloks added yet ❌

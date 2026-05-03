@@ -1,5 +1,5 @@
 import { NextResponse } from "next/server";
-import  {connectDB}  from "../../../lib/data";
+import  {connectDB}  from "../../../lib/dB";
 import Shlok from "@/models/Shlok";
 
 export async function POST(req: Request) {

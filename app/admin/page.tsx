@@ -145,9 +145,12 @@ export default function AdminPage() {
       setShloks((prev) => prev.filter((s) => s._id !== id));
     } catch (err) {
       console.error(err);
-      alert("Server error ❌");
+      alert("Server error Not success full❌");
     }
   };
+
+
+
 
   const handleAudioUpload = async (e: React.ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files?.[0];

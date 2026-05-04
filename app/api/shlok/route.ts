@@ -1,6 +1,7 @@
 import { NextResponse } from "next/server";
 import  {connectDB}  from "@/db";
 import Shlok from "@/models/Shlok";
+import { Params } from "next/dist/server/request/params";
 
 export async function POST(req: Request) {
   await connectDB();

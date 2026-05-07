@@ -112,7 +112,6 @@ export default function ReaderPage() {
   if (loading) {
     return (
       <div className="min-h-screen flex items-center justify-center flex-col bg-gradient-to-b from-[#fdfaf5] to-[#f7f1e3] px-6">
-       
         <p className="mt-6 text-gray-500 text-sm">Loading shlok...</p>
       </div>
     );
@@ -131,15 +130,27 @@ export default function ReaderPage() {
     <div
       onTouchStart={handleTouchStart}
       onTouchEnd={handleTouchEnd}
-      className={`min-h-screen flex flex-col items-center justify-center px-6 bg-gradient-to-b from-[#fdfaf5] to-[#f7f1e3] ${swipeClass}`}
+      className={`min-h-screen flex flex-col items-center justify-center px-6 py-10 bg-gradient-to-b from-[#fdfaf5] to-[#f7f1e3] ${swipeClass}`}
     >
       <div className="max-w-3xl w-full fade-in">
+        <div className="mb-6 text-center">
+          <p className="text-sm uppercase tracking-[0.2em] text-[#8b6f47]">
+            Bhagavad Gita
+          </p>
+          <h1 className="text-2xl md:text-3xl font-serif text-[#2f2015] mt-2">
+            अध्याय {chapterNum} • श्लोक {shlokNum}
+          </h1>
+          <p className="text-sm text-gray-500 mt-2">
+            Adhyay {chapterNum} • Shlok {shlokNum}
+          </p>
+        </div>
+
         <ShlokCard shlok={current} />
       </div>
 
       <NavigationControls chapter={chapterNum} shlok={shlokNum} />
 
-      <div className="absolute bottom-4 text-gray-400 text-sm">← Swipe →</div>
+      <div className="mt-6 text-gray-400 text-sm">← Swipe →</div>
     </div>
   );
 }

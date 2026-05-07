@@ -150,7 +150,7 @@ export default function ReaderPage() {
 
       <NavigationControls chapter={chapterNum} shlok={shlokNum} />
 
-      <div className="mt-6 text-gray-400 text-sm">← Swipe →</div>
+      <div className="absolute bottom-4 text-gray-400 text-sm">← Swipe →</div>
     </div>
   );
 }

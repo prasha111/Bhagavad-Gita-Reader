@@ -16,7 +16,7 @@ export default function ShlokCard({ shlok }: any) {
       </p>
 
       <p className="text-md text-gray-500 italic max-w-xl mx-auto">
-        {shlok?.meaning?.hindi}
+        {shlok?.hindi}
       </p>
 
       {shlok?.audio && (

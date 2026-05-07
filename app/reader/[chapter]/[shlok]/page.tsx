@@ -112,14 +112,7 @@ export default function ReaderPage() {
   if (loading) {
     return (
       <div className="min-h-screen flex items-center justify-center flex-col bg-gradient-to-b from-[#fdfaf5] to-[#f7f1e3] px-6">
-        <div className="max-w-3xl w-full bg-white rounded-3xl shadow-xl p-8 animate-pulse">
-          <div className="h-6 w-40 bg-gray-200 rounded mb-6" />
-          <div className="h-5 w-full bg-gray-200 rounded mb-3" />
-          <div className="h-5 w-11/12 bg-gray-200 rounded mb-3" />
-          <div className="h-5 w-10/12 bg-gray-200 rounded mb-6" />
-          <div className="h-4 w-8/12 bg-gray-200 rounded mb-2" />
-          <div className="h-4 w-7/12 bg-gray-200 rounded" />
-        </div>
+       
         <p className="mt-6 text-gray-500 text-sm">Loading shlok...</p>
       </div>
     );

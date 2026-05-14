@@ -1,36 +1,113 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Bhagavad Gita Reader
+
+A modern web application for reading the Bhagavad Gita chapter by chapter and verse by verse through a clean, responsive interface.
+
+**Live Demo:** [https://bhagavad-gita-reader-abgv.vercel.app/](https://bhagavad-gita-reader-abgv.vercel.app/)
+
+## Overview
+
+Bhagavad Gita Reader is designed to provide a simple digital reading experience for the Bhagavad Gita. The app structure suggests direct verse access through dynamic URLs, making chapter-wise and verse-wise reading easy to navigate.
+
+## Features
+
+- Chapter-wise and verse-wise reading
+- Direct access to verses using dynamic routes
+- Clean and responsive UI
+- Mobile-friendly reading experience
+- Shareable verse links
+
+## Reader Route
+
+The app uses a verse-based route structure:
+
+```bash
+/reader/[chapter]/[verse]
+```
+
+Example:
+
+```bash
+/reader/1/1
+```
+
+This route opens Chapter 1, Verse 1 directly.
+
+## Tech Stack
+
+Likely stack based on deployment pattern:
+
+- Next.js
+- React
+- JavaScript or TypeScript
+- Vercel
 
 ## Getting Started
 
-First, run the development server:
+Clone the repository:
+
+```bash
+git clone <your-repository-url>
+cd <your-project-folder>
+```
+
+Install dependencies:
+
+```bash
+npm install
+```
+
+Run the development server:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open in browser:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+http://localhost:3000
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Production Build
 
-## Learn More
+```bash
+npm run build
+npm run start
+```
 
-To learn more about Next.js, take a look at the following resources:
+## Project Structure
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Example structure:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```bash
+.
+├── app / pages
+├── components
+├── public
+├── styles
+├── utils
+└── package.json
+```
 
-## Deploy on Vercel
+## Deployment
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+The application is deployed on Vercel:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+[https://bhagavad-gita-reader-abgv.vercel.app/](https://bhagavad-gita-reader-abgv.vercel.app/)
+
+## Future Improvements
+
+- Search by verse or chapter
+- Multiple translations
+- Dark mode
+- Audio recitation
+- Bookmarks and favorites
+- Notes and highlights
+
+## License
+
+MIT License
+
+## Author
+
+Prashant Sharma
